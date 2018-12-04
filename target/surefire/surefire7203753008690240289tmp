@@ -1,0 +1,8 @@
+#surefire
+#Sat Dec 01 17:31:43 CST 2018
+maven.ext.class.path=D\:\\Herramientas\\NetBeans 8.2\\java\\maven-nblib\\netbeans-eventspy.jar
+user.dir=C\:\\Users\\karen\\Desktop\\PruebasFuncionalesMyList
+file.encoding=UTF-8
+localRepository=C\:\\Users\\karen\\.m2\\repository
+basedir=C\:\\Users\\karen\\Desktop\\PruebasFuncionalesMyList
+test=TestIndex
