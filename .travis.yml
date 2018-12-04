@@ -1,0 +1,34 @@
+language: java
+
+build: trusty
+
+jdk:
+- oraclejdk8
+
+git:
+  quiet: true
+
+before_script:
+- wget https://chromedriver.storage.googleapis.com/2.44/chromedriver_linux64.zip
+- unzip chromedriver_linux64.zip 
+
+
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-beta
+
+install: true
+
+script: 
+- ./mvnw clean install
+- mvn clean install -U
+- mvn dependency::tree
+- mvn clean test
+- mvn -f pom.xml test
+
+
+after_failure:
+- cat target/surefire-reports/*.txt
